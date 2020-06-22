@@ -1,0 +1,16 @@
+.masthead {
+  height: 95vh;
+  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.fixedContainer {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

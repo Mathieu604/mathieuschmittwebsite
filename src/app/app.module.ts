@@ -1,26 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { LandingComponent } from './landing/landing.component';
 import { CardSummaryComponent } from './card-summary/card-summary.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { LandingComponent } from './landing/landing.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CardSummaryComponent,
-    HomePageComponent,
-    LandingComponent,
-    TopBarComponent
-  ],
-  imports: [
+  imports:      [
     BrowserModule,
-    AppRoutingModule
-  ],
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: '', component: HomePageComponent },
+    ]) ],
+  declarations: [ AppComponent, TopBarComponent, LandingComponent, CardSummaryComponent, HomePageComponent,  ],
+  bootstrap:    [ AppComponent ],
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
